@@ -13,7 +13,12 @@ const navSections = [
   },
 ];
 
-const topLevelLinks = ["Solutions", "Features", "Company", "Pricing"];
+const topLevelLinks = [
+  { label: "Solutions", href: "#" },
+  { label: "Features", href: "#features" },
+  { label: "Company", href: "#" },
+  { label: "Pricing", href: "#" },
+];
 
 export default function Navbar() {
   return (
@@ -64,12 +69,12 @@ export default function Navbar() {
             ))}
 
             {topLevelLinks.map((link) => (
-              <li key={link}>
+              <li key={link.label}>
                 <a
-                  href="#"
+                  href={link.href}
                   className="text-sm font-medium text-primary-50/90 hover:text-primary-50"
                 >
-                  {link}
+                  {link.label}
                 </a>
               </li>
             ))}
