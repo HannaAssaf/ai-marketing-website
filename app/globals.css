@@ -34,38 +34,35 @@
 }
 
 @theme inline {
-  --primary-500: var(--color-primary-500);
-  --primary-50: var(--color-primary-50);
-  --neutral-50: var(--color-neutral-50);
-  --neutral-100: var(--color-neutral-100);
-  --neutral-200: var(--color-neutral-200);
-  --neutral-300: var(--color-neutral-300);
-  --neutral-400: var(--color-neutral-400);
-  --neutral-500: var(--color-neutral-500);
-  --neutral-600: var(--color-neutral-600);
-  --neutral-700: var(--color-neutral-700);
-  --neutral-800: var(--color-neutral-800);
-  --neutral-900: var(--color-neutral-900);
-  --neutral-950: var(--color-neutral-950);
+  --color-primary-500: #FF6600;
+  --color-primary-50: #FFF4ED;
+  --color-neutral-50: #F9FAF4;
+  --color-neutral-100: #E7EAEB;
+  --color-neutral-200: #C2CBDD;
+  --color-neutral-300: #9AA6BA;
+  --color-neutral-400: #7E90A3;
+  --color-neutral-500: #667A93;
+  --color-neutral-600: #5D6E7F;
+  --color-neutral-700: #4D5869;
+  --color-neutral-800: #2A323D;
+  --color-neutral-900: #0E1115;
+  --color-neutral-950: #0C1115;
 
   --background: var(--color-neutral-950);
-  --foreground: var(--foreground);
+  --foreground: #ffffff;
   --border: var(--color-neutral-800);
 
-  --font-sans: var(--font-body);
-  --font-heading: var(--font-heading);
+  --font-sans: var(--font-body, "Inter Tight", Arial, sans-serif);
+  --font-heading: var(--font-heading, "Sansation", Arial, sans-serif);
 
- 
-  --body-sm: var(--font-size-body-sm),
-  --body-md: var(--font-size-body-md),
-  --body-lg: var(--font-size-body-lg),
-  --body-xl: var(--font-size-body-xl),
+  --text-body-sm: 14px;
+  --text-body-md: 16px;
+  --text-body-lg: 18px;
+  --text-body-xl: 20px;
 
-
-  --regular: var(--font-weight-regular),
-  --medium: var(--font-weight-medium),
-  --semibold: var(--font-weight-semibold),
-  
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
 }
 
 * {
