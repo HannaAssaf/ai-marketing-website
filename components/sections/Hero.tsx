@@ -54,16 +54,16 @@ export default function Hero() {
               <Image
                 src="/images/hero-vertical-rectangle.png"
                 alt=""
-                width={200}
-                height={980}
+                width={160}
+                height={550}
                 className="pointer-events-none absolute -right-12 top-[-100px] hidden xl:block"
               />
               <Image
                 src="/images/hero-vertical-rectangle2.png"
                 alt=""
-                width={200}
-                height={980}
-                className="pointer-events-none absolute -right-12 top-[-60px] hidden xl:block"
+                width={160}
+                height={550}
+                className="pointer-events-none absolute -right-12 top-[-50px] hidden xl:block"
               />
 
               <div className="relative w-full overflow-hidden rounded-2xl ">
