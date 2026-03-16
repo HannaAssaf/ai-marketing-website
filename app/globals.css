@@ -96,3 +96,48 @@ body {
   animation: brandsline-left 40s linear infinite;
 }
 
+@keyframes logo-comet-tail {
+  0% {
+    transform: translateX(-3px);
+    opacity: 0.25;
+  }
+
+  35% {
+    opacity: 0.95;
+  }
+
+  100% {
+    transform: translateX(3px);
+    opacity: 0.2;
+  }
+}
+
+@keyframes logo-star-drift {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(1.5px);
+  }
+}
+
+.animate-logo-comet-1 {
+  animation: logo-comet-tail 1.15s ease-in-out infinite;
+}
+
+.animate-logo-comet-2 {
+  animation: logo-comet-tail 1.3s ease-in-out infinite;
+  animation-delay: 0.12s;
+}
+
+.animate-logo-comet-3 {
+  animation: logo-comet-tail 1.45s ease-in-out infinite;
+  animation-delay: 0.2s;
+}
+
+.animate-logo-star-drift {
+  animation: logo-star-drift 1.6s ease-in-out infinite;
+}
+

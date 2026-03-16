@@ -44,17 +44,39 @@ export default function Navbar() {
             <div className="flex items-center gap-[30px]">
               <a
                 href="/"
-                className="flex h-11 items-center gap-1.5 rounded-[14px] border border-[var(--border)] px-3 py-1"
+                className="relative isolate flex h-[46px] items-center gap-3 overflow-hidden rounded-[14px] border border-neutral-800 bg-black/95 pl-2.5 pr-4"
               >
-                <Image
-                  src="/logo1.svg"
-                  alt="AutoAI logo"
-                  width={60}
-                  height={53.5}
-                  className="h-10 w-9 shrink-0 [text-shadow:0_0_80px_#ED5F00,0_0_20px_rgba(237,95,0,0.12),0_0_40px_#ED5F00,0_0_20px_#FE02F0,0_0_10px_#FE02F0]"
-                  priority
+                <span
+                  aria-hidden
+                  className="pointer-events-none absolute inset-y-0 left-0 z-0 w-[33%]"
+                  style={{
+                    background:
+                      "radial-gradient(120% 105% at 26% 50%, rgba(237,95,0,0.22) 0%, rgba(254,2,240,0.16) 44%, rgba(254,2,240,0.06) 58%, rgba(0,0,0,0) 100%)",
+                    filter: "blur(4px)",
+                  }}
                 />
-                <span className="font-body text-md font-bold">AutoAI</span>
+                <span className="relative z-10 grid h-10 w-9 shrink-0 place-items-center animate-logo-star-drift">
+                  <span
+                    aria-hidden
+                    className="pointer-events-none absolute inset-[-6px] -z-10 rounded-full"
+                    style={{
+                      background:
+                        "radial-gradient(closest-side at 50% 50%, rgba(254,2,240,0.26) 0%, rgba(237,95,0,0.15) 55%, rgba(0,0,0,0) 100%)",
+                      filter: "blur(7px)",
+                    }}
+                  />
+                  <Image
+                    src="/logo.svg"
+                    alt="AutoAI logo"
+                    width={22}
+                    height={22}
+                    className="relative z-10 h-[22px] w-[22px]"
+                    priority
+                  />
+                </span>
+                <span className="relative z-10 font-body text-[22px] leading-none font-semibold tracking-[-0.02em] text-primary-50">
+                  AutoAI
+                </span>
               </a>
 
               <ul className="hidden h-11 w-110 items-center gap-8 rounded-[14px] border border-[var(--border)] px-3 py-2 lg:flex">
@@ -137,7 +159,7 @@ export default function Navbar() {
                   className="flex h-8 items-center gap-1.5 rounded-[10px] border border-[var(--border)] px-2"
                 >
                   <Image
-                    src="/logo1.svg"
+                    src="/logo.svg"
                     alt="AutoAI logo"
                     width={22}
                     height={20}
