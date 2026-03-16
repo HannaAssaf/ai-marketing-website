@@ -73,7 +73,7 @@ const oddCardAvatars = [
 
 export default function Testimonial() {
   return (
-    <section className="py-[130px]">
+    <section className="py-16 xl:py-[130px]">
       <Container>
         <div className="mx-auto w-full max-w-7xl">
           <SectionHeading level="h2" className="max-w-[420px]">

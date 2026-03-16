@@ -62,7 +62,7 @@ export default function Pricing() {
   const [activePlanId, setActivePlanId] = useState<string>(plans[0].id);
 
   return (
-    <section id="pricing" className="py-[130px]">
+    <section id="pricing" className="py-16 xl:py-[130px]">
       <Container>
         <div className="mx-auto w-full max-w-7xl">
           <div className="grid grid-cols-1 gap-6 xl:grid-cols-[1fr_400px] xl:items-start">

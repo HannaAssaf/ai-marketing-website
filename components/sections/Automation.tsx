@@ -32,7 +32,7 @@ const cards: AutomationCard[] = [
 
 export default function Automation() {
   return (
-    <section id="automation" className="py-[130px]">
+    <section id="automation" className="py-16 xl:py-[130px]">
       <Container>
         <div className="mx-auto w-full max-w-7xl">
           <div className="grid grid-cols-1 gap-8 xl:grid-cols-[1fr_355px] xl:items-start">

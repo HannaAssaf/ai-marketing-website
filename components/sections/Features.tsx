@@ -60,7 +60,7 @@ const features: FeatureItem[] = [
 
 export default function Features() {
   return (
-    <section id="features" className="scroll-mt-28 py-[130px]">
+    <section id="features" className="scroll-mt-28 py-16 xl:py-[130px]">
       <Container>
         <div className="mx-auto w-full max-w-7xl">
           <h2 className="sr-only">Features</h2>
