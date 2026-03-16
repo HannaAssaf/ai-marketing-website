@@ -17,7 +17,7 @@ const topLevelLinks = [
   { label: "Solutions", href: "#" },
   { label: "Features", href: "#features" },
   { label: "Company", href: "#" },
-  { label: "Pricing", href: "#" },
+  { label: "Pricing", href: "#pricing" },
 ];
 
 export default function Navbar() {
@@ -46,12 +46,12 @@ export default function Navbar() {
           <ul className="hidden w-110 items-center gap-8 lg:flex  h-11 border rounded-[14px] border-[var(--border)] px-3 py-2">
             {navSections.map((section) => (
               <li key={section.label} className="group relative">
-                <button
-                  type="button"
+                <a
+                  href="#capabilites"
                   className="text-sm font-medium text-primary-50/90 hover:text-primary-50"
                 >
                   {section.label}
-                </button>
+                </a>
 
                 <ul className="invisible absolute left-0 top-full z-20 mt-3 min-w-[220px] rounded-lg border border-white/10 bg-[#0E1115] p-3 opacity-0 shadow-lg transition group-hover:visible group-hover:opacity-100 ">
                   {section.items.map((item) => (

@@ -65,6 +65,12 @@ const cards: TestimonialCard[] = [
   },
 ];
 
+const oddCardAvatars = [
+  "/images/ellipse1.png",
+  "/images/ellipse2.png",
+  "/images/ellipse3.png",
+];
+
 export default function Testimonial() {
   return (
     <section className="py-[130px]">
@@ -78,13 +84,16 @@ export default function Testimonial() {
             <ul className="flex min-w-max snap-x snap-mandatory gap-4">
               {cards.map((card, index) => {
                 const isOddCard = index % 2 === 0;
+                const oddCardIndex = Math.floor(index / 2);
+                const avatarSrc =
+                  oddCardAvatars[oddCardIndex] ?? "/images/ellipse.jpg";
 
                 return (
                   <li
                     key={card.id}
-                    className="relative h-[420px] w-[321px] shrink-0 snap-start overflow-hidden rounded-[20px] border border-white/10 bg-[#070E18]"
+                    className="relative h-[368px] w-[383px] shrink-0 snap-start overflow-hidden rounded-[24px] border border-neutral-950 bg-[#070E18]"
                   >
-                    <div className="absolute inset-0 overflow-hidden rounded-[20px] [clip-path:inset(0_round_20px)]">
+                    <div className="absolute inset-[15px] overflow-hidden rounded-[20px] border border-neutral-950 [clip-path:inset(0_round_20px)]">
                       <Image
                         src={card.image}
                         alt={card.name}
@@ -92,8 +101,22 @@ export default function Testimonial() {
                         className="pointer-events-none object-cover object-center"
                       />
                     </div>
-                    <div className="pointer-events-none absolute inset-0 bg-black/35" />
-                    <div className="relative z-10 flex h-full flex-col justify-between p-7">
+                    {isOddCard && (
+                      <div className="pointer-events-none absolute inset-[15px] overflow-hidden rounded-[20px] [clip-path:inset(0_round_20px)]">
+                        <Image
+                          src="/images/automation-bg.png"
+                          alt=""
+                          fill
+                          className="object-cover opacity-90 mix-blend-screen"
+                        />
+                      </div>
+                    )}
+                    <div
+                      className={`pointer-events-none absolute inset-[15px] rounded-[20px] ${
+                        isOddCard ? "bg-black/10" : "bg-black/35"
+                      }`}
+                    />
+                    <div className="relative z-10 flex h-full flex-col justify-between p-[30px]">
                       {isOddCard ? (
                         <>
                           <p className="text-body-xl leading-[30px] font-medium text-neutral-50">
@@ -102,7 +125,7 @@ export default function Testimonial() {
 
                           <div className="flex items-center gap-3">
                             <Image
-                              src="/images/ellipse.jpg"
+                              src={avatarSrc}
                               alt={card.name}
                               width={41}
                               height={41}

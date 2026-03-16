@@ -55,7 +55,7 @@ const capabilityCards: CapabilityCard[] = [
 
 export default function Capabilites() {
   return (
-    <section className="py-[130px]">
+    <section id="capabilites" className="py-[130px]">
       <Container>
         <div className="mx-auto w-full max-w-7xl">
           <div className="mx-auto max-w-[760px] text-center">
