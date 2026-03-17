@@ -39,24 +39,27 @@ export default function Benefits() {
             <div
               aria-hidden
               className="pointer-events-none absolute bottom-0 left-1/2 top-[430px] w-screen -translate-x-1/2 bg-bottom bg-cover bg-no-repeat sm:top-[450px]"
-              style={{ backgroundImage: "url('/images/benefits-bg-image.png')" }}
+              style={{
+                backgroundImage: "url('/images/benefits-bg-image.png')",
+                top: "clamp(280px, 56vw, 430px)",
+              }}
             />
 
             <SectionHeading
               level="h2"
-              className="relative z-10 mx-auto text-center text-[clamp(32px,9vw,38px)] leading-[clamp(40px,11vw,48px)]"
+              className="relative z-10 mx-auto px-1 text-center text-[clamp(32px,9vw,38px)] leading-[clamp(40px,11vw,48px)]"
             >
               We streamline workflows, eliminate manual steps, and scale decisions
               in real time so your brand moves with precision, not guesswork.
             </SectionHeading>
 
             <div className="relative z-10 mx-auto mt-8 w-full rounded-[16px] border border-[#2A323D] p-3">
-              <div className="min-h-[640px] rounded-[14px] border border-[#2A323D] bg-[#000000] p-5 sm:min-h-[775px]">
+              <div className="rounded-[14px] border border-[#2A323D] bg-[#000000] p-5 sm:p-6">
                 <p className="mx-auto text-center text-[clamp(28px,8vw,32px)] leading-[clamp(34px,9vw,38px)] font-medium text-neutral-50">
                   What can you achieve with AutoAI?
                 </p>
 
-                <ul className="mx-auto mt-8 w-full space-y-8 sm:space-y-10">
+                <ul className="mx-auto mt-8 w-full space-y-8">
                   {benefits.map((benefit) => (
                     <li key={benefit.id}>
                       <Image

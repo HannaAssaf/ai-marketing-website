@@ -8,6 +8,7 @@ import Capabilites from "@/components/sections/Capabilites";
 import Testimonial from "@/components/sections/Testimonial";
 import Pricing from "@/components/sections/Pricing";
 import Benefits from "@/components/sections/Benefits";
+import Statistic from "@/components/sections/Statistic";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <Capabilites />
       <Testimonial />
       <Pricing />
+      <Statistic />
       <Footer />
     </main>
   );
