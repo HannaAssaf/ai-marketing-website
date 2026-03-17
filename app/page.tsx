@@ -7,6 +7,7 @@ import Automation from "@/components/sections/Automation";
 import Capabilites from "@/components/sections/Capabilites";
 import Testimonial from "@/components/sections/Testimonial";
 import Pricing from "@/components/sections/Pricing";
+import Benefits from "@/components/sections/Benefits";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <BrandsLine />
       <Features />
       <Automation />
+      <Benefits />
       <Capabilites />
       <Testimonial />
       <Pricing />
