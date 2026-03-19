@@ -13,7 +13,7 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="relative mt-40 bg-black pb-8 pt-[100px]">
+    <footer className="relative mt-24 bg-black pb-8 pt-[100px]">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-10 overflow-hidden">
         <div className="absolute inset-x-0 top-[18px] h-[2px] bg-[linear-gradient(90deg,rgba(255,117,212,0)_0%,rgba(255,117,212,1)_50%,rgba(255,117,212,0)_100%)]" />
         <div className="absolute left-1/2 top-0 h-10 w-[480px] -translate-x-1/2 bg-[radial-gradient(ellipse_at_center,rgba(182,56,255,0.58)_0%,rgba(115,80,255,0.35)_38%,rgba(115,80,255,0)_78%)] blur-[8px]" />

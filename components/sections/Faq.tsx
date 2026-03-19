@@ -54,12 +54,12 @@ export default function Faq() {
   const [openId, setOpenId] = useState<string | null>(null);
 
   return (
-    <section id="faq" className="py-16 xl:py-[130px]">
+    <section id="faq" className="max-xl:overflow-x-clip py-20 xl:py-[130px]">
       <Container>
-        <div className="relative mx-auto w-full max-w-7xl overflow-hidden bg-black px-5 py-12 xl:px-20 xl:py-16">
+        <div className="relative -mx-5 w-[calc(100%+2.5rem)] overflow-visible bg-black px-5 py-32 xl:mx-auto xl:w-full xl:max-w-7xl xl:overflow-hidden xl:px-20 xl:py-16">
           <div
             aria-hidden
-            className="pointer-events-none absolute left-1/2 top-1/2 h-[943px] w-[943px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#F08A3C]/65 shadow-[0_0_38px_rgba(255,130,34,0.5),inset_0_0_38px_rgba(255,130,34,0.22)] xl:h-[1127px] xl:w-[1127px]"
+            className="pointer-events-none absolute left-1/2 top-1/2 h-[1037px] w-[1037px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#F08A3C]/65 shadow-[0_0_38px_rgba(255,130,34,0.5),inset_0_0_38px_rgba(255,130,34,0.22)] xl:h-[1127px] xl:w-[1127px]"
           />
 
           <div className="relative z-10 mx-auto max-w-[640px] text-center">
