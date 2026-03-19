@@ -54,10 +54,10 @@ export default function Statistic() {
             {statistics.map((item) => (
               <li
                 key={item.id}
-                className="w-full rounded-[16px] border border-[#2A323D] p-6"
+                className="w-full rounded-[16px] border border-[#2A323D] bg-cover bg-right-bottom bg-no-repeat p-6"
                 style={{
-                  background:
-                    "radial-gradient(90% 100% at 100% 50%, rgba(30,38,49,0.28) 0%, rgba(0,0,0,0) 60%), rgba(0,0,0,0.9)",
+                  backgroundImage:
+                    "url('/images/statistic-bg.png')",
                 }}
               >
                 <p className="font-heading text-[40px] leading-[44px] font-bold tracking-[-0.03em] text-neutral-50">
@@ -78,10 +78,10 @@ export default function Statistic() {
               {statistics.map((item) => (
                 <li
                   key={item.id}
-                  className="min-h-[279px] rounded-[14px] border border-[#2A323D] px-6 py-6"
+                  className="min-h-[279px] rounded-[14px] border border-[#2A323D] bg-cover bg-right-bottom bg-no-repeat px-6 py-6"
                   style={{
-                    background:
-                      "radial-gradient(90% 100% at 100% 50%, rgba(30,38,49,0.2) 0%, rgba(0,0,0,0) 60%), rgba(0,0,0,0.9)",
+                    backgroundImage:
+                      "linear-gradient(0deg, rgba(0,0,0,0.88), rgba(0,0,0,0.88)), url('/images/statistic-bg.png')",
                   }}
                 >
                   <p className="font-heading text-[40px] leading-[44px] font-bold tracking-[-0.03em] text-neutral-50">
