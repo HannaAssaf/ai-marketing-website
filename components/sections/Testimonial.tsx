@@ -93,29 +93,38 @@ export default function Testimonial() {
                     key={card.id}
                     className="relative h-[368px] w-[383px] shrink-0 snap-start overflow-hidden rounded-[24px] border border-neutral-950 bg-[#070E18]"
                   >
-                    <div className="absolute inset-[15px] overflow-hidden rounded-[20px] border border-neutral-950 [clip-path:inset(0_round_20px)]">
-                      <Image
-                        src={card.image}
-                        alt={card.name}
-                        fill
-                        className="pointer-events-none object-cover object-center"
-                      />
-                    </div>
-                    {isOddCard && (
-                      <div className="pointer-events-none absolute inset-[15px] overflow-hidden rounded-[20px] [clip-path:inset(0_round_20px)]">
+                    <div className="absolute inset-[15px] overflow-hidden rounded-[20px] border border-black">
+                      {isOddCard ? (
+                        <>
+                          <div className="absolute inset-0 bg-black" />
+                          <div className="absolute inset-0 bg-[rgba(255,102,0,0.10)]" />
+                          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(153,153,153,0.07)_0%,rgba(255,255,255,0)_100%)]" />
+                          <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_12%,rgba(255,102,0,0.59)_0%,rgba(255,102,0,0.42)_28%,rgba(255,102,0,0.22)_52%,rgba(255,102,0,0.08)_72%,rgba(255,102,0,0)_100%)]" />
+                          {/* Фото поверх градієнтів; текст у сусідньому блоці z-10 — поверх */}
+                          <Image
+                            src="/images/automation-bg.png"
+                            alt=""
+                            fill
+                            sizes="383px"
+                            className="pointer-events-none object-cover object-center"
+                            aria-hidden
+                          />
+                        </>
+                      ) : (
                         <Image
-                          src="/images/automation-bg.png"
-                          alt=""
+                          src={card.image}
+                          alt={card.name}
                           fill
-                          className="object-cover opacity-90 mix-blend-screen"
+                          sizes="383px"
+                          className="pointer-events-none object-cover object-center"
                         />
-                      </div>
+                      )}
+                    </div>
+
+                    {!isOddCard && (
+                      <div className="pointer-events-none absolute inset-[15px] rounded-[20px] bg-black/35" />
                     )}
-                    <div
-                      className={`pointer-events-none absolute inset-[15px] rounded-[20px] ${
-                        isOddCard ? "bg-black/10" : "bg-black/35"
-                      }`}
-                    />
+
                     <div className="relative z-10 flex h-full flex-col justify-between p-[30px]">
                       {isOddCard ? (
                         <>
