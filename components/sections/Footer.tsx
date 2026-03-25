@@ -9,7 +9,14 @@ const mainPages: { label: string; href: string }[] = [
   { label: "Company", href: "#automation" },
   { label: "Pricing", href: "#pricing" },
 ];
-const utilityPages = ["404", "License", "Style Guide", "Instructions", "Change-Log"];
+const utilityPages: { label: string; href: string }[] = [
+  
+  { label: "License", href: "/license" },
+  // { label: "404", href: "/page-not-found" },
+  // { label: "Style Guide", href: "/style-guide" },
+  // { label: "Instructions", href: "#" },
+  // { label: "Change-Log", href: "#" },
+];
 
 const socialLinks = [
   { label: "Facebook", iconId: "facebook", href: "https://www.facebook.com/" },
@@ -90,9 +97,12 @@ export default function Footer() {
               </h3>
               <ul className="mt-5 space-y-3 text-body-md leading-normal font-medium text-neutral-400">
                 {utilityPages.map((item) => (
-                  <li key={item}>
-                    <a href="#" className="text-neutral-400 transition hover:text-primary-50">
-                      {item}
+                  <li key={item.label}>
+                    <a
+                      href={item.href}
+                      className="text-neutral-400 transition hover:text-primary-50"
+                    >
+                      {item.label}
                     </a>
                   </li>
                 ))}
